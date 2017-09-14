@@ -1,24 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-R9-4AJ">
+                                <rect key="frame" x="137.5" y="101" width="100" height="546"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ser-pi-o4T">
+                                <rect key="frame" x="137.5" y="40" width="100" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="STK-57-9fc"/>
+                                    <constraint firstAttribute="width" constant="100" id="jpW-ND-yVj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6jb-Rv-DO1" kind="presentation" id="gPF-iR-neZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vea-GV-aVS">
+                                <rect key="frame" x="137.5" y="586" width="100" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SiK-5E-OC2" kind="presentation" id="6gD-6v-a38"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lh-lK-sKi">
+                                <rect key="frame" x="16" y="310" width="100" height="87"/>
+                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="umP-ZA-qv6" kind="presentation" id="rX1-8B-w5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-t7-iL2">
+                                <rect key="frame" x="259" y="310" width="100" height="87"/>
+                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2NL-al-Onf" kind="presentation" id="De1-cU-Xbp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zic-0q-4ww">
+                                <rect key="frame" x="116" y="310" width="143" height="87"/>
+                                <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.52686830380000005" blue="0.45181325620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OP4-t7-iL2" secondAttribute="trailing" constant="16" id="0Kh-Nv-dVy"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="width" secondItem="9lh-lK-sKi" secondAttribute="width" priority="800" id="0zA-eU-GIl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xXq-R9-4AJ" secondAttribute="bottom" constant="20" id="2zS-Po-cA0"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="A8d-pG-tyI"/>
+                            <constraint firstItem="vea-GV-aVS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dfs-0L-bXU"/>
+                            <constraint firstItem="xXq-R9-4AJ" firstAttribute="width" secondItem="ser-pi-o4T" secondAttribute="width" priority="800" id="P9H-Af-wRQ"/>
+                            <constraint firstItem="zic-0q-4ww" firstAttribute="height" secondItem="OP4-t7-iL2" secondAttribute="height" priority="500" id="RKa-xR-EJ5"/>
+                            <constraint firstItem="9lh-lK-sKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Uht-jK-5gi"/>
+                            <constraint firstItem="OP4-t7-iL2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="10" id="Vfx-UP-9FB"/>
+                            <constraint firstItem="xXq-R9-4AJ" firstAttribute="top" secondItem="ser-pi-o4T" secondAttribute="bottom" priority="900" id="XII-SI-bpH"/>
+                            <constraint firstItem="xXq-R9-4AJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZAP-gW-Uq7"/>
+                            <constraint firstItem="zic-0q-4ww" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="10" id="b6r-nV-kyG"/>
+                            <constraint firstItem="zic-0q-4ww" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="edU-UB-ID3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vea-GV-aVS" secondAttribute="bottom" constant="20" id="ht2-Bn-biI"/>
+                            <constraint firstItem="9lh-lK-sKi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="10" id="iOk-dl-Z9H"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="width" secondItem="vea-GV-aVS" secondAttribute="width" priority="800" id="p1P-i3-SmY"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="height" secondItem="OP4-t7-iL2" secondAttribute="height" multiplier="0.7" priority="800" id="phC-Xs-xd2"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="height" secondItem="vea-GV-aVS" secondAttribute="height" priority="800" id="sG3-SV-hbc"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="height" secondItem="9lh-lK-sKi" secondAttribute="height" multiplier="0.7" priority="800" id="sZZ-96-1Ou"/>
+                            <constraint firstItem="OP4-t7-iL2" firstAttribute="leading" secondItem="zic-0q-4ww" secondAttribute="trailing" id="tkN-f7-d5b"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v2v-pj-me4"/>
+                            <constraint firstItem="ser-pi-o4T" firstAttribute="width" secondItem="OP4-t7-iL2" secondAttribute="width" priority="800" id="xnc-G3-o2u"/>
+                            <constraint firstItem="zic-0q-4ww" firstAttribute="leading" secondItem="9lh-lK-sKi" secondAttribute="trailing" id="z6e-ZJ-Lvx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DkH-v8-LbS">
+            <objects>
+                <viewController id="SiK-5E-OC2" customClass="ViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qQE-z6-vGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjH-IX-SxS">
+                                <rect key="frame" x="20" y="604" width="335" height="43"/>
+                                <color key="backgroundColor" red="0.74369273970000005" green="0.94239152680000005" blue="0.36190100850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Compass">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="compassButton:" destination="SiK-5E-OC2" eventType="touchUpInside" id="57O-jU-1Em"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eSO-AR-Rpc" firstAttribute="bottom" secondItem="RjH-IX-SxS" secondAttribute="bottom" constant="20" id="43W-b8-1hW"/>
+                            <constraint firstItem="RjH-IX-SxS" firstAttribute="leading" secondItem="eSO-AR-Rpc" secondAttribute="leading" constant="20" id="TaC-dw-fiy"/>
+                            <constraint firstItem="eSO-AR-Rpc" firstAttribute="trailing" secondItem="RjH-IX-SxS" secondAttribute="trailing" constant="20" id="sag-7Y-pam"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eSO-AR-Rpc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKi-CJ-fHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="-234"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zap-bH-HXv">
+            <objects>
+                <viewController id="6jb-Rv-DO1" customClass="ViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IfF-7G-Hk2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKU-or-eYM">
+                                <rect key="frame" x="20" y="40" width="335" height="43"/>
+                                <color key="backgroundColor" red="0.74369273970000005" green="0.94239152680000005" blue="0.36190100850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Compass">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="compassButton:" destination="6jb-Rv-DO1" eventType="touchUpInside" id="Cjk-Eq-cQc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JKU-or-eYM" firstAttribute="leading" secondItem="M7y-a5-MuY" secondAttribute="leading" constant="20" id="Q40-qh-FZq"/>
+                            <constraint firstItem="JKU-or-eYM" firstAttribute="top" secondItem="M7y-a5-MuY" secondAttribute="top" constant="20" id="VNa-fA-ZOT"/>
+                            <constraint firstItem="M7y-a5-MuY" firstAttribute="trailing" secondItem="JKU-or-eYM" secondAttribute="trailing" constant="20" id="eBI-lx-OgO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M7y-a5-MuY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0E-Vc-7jL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634.39999999999998" y="-235.23238380809596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5rc-Id-oK3">
+            <objects>
+                <viewController id="2NL-al-Onf" customClass="ViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1VG-I2-vlU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-bn-Kiz">
+                                <rect key="frame" x="167.5" y="312" width="187.5" height="43"/>
+                                <color key="backgroundColor" red="0.74369273970000005" green="0.94239152680000005" blue="0.36190100850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Compass">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="compassButton:" destination="2NL-al-Onf" eventType="touchUpInside" id="1GD-b6-t4z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AKp-bn-Kiz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ozK-6j-ckR" secondAttribute="leading" constant="20" id="GgJ-HI-Q2R"/>
+                            <constraint firstItem="AKp-bn-Kiz" firstAttribute="width" secondItem="1VG-I2-vlU" secondAttribute="width" multiplier="0.5" id="a6N-xg-MMY"/>
+                            <constraint firstItem="ozK-6j-ckR" firstAttribute="trailing" secondItem="AKp-bn-Kiz" secondAttribute="trailing" constant="20" id="kSc-hL-0eS"/>
+                            <constraint firstItem="AKp-bn-Kiz" firstAttribute="centerY" secondItem="1VG-I2-vlU" secondAttribute="centerY" id="wh1-Rd-y9e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ozK-6j-ckR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbX-SQ-mga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633.5" y="542.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JDV-NU-iXz">
+            <objects>
+                <viewController id="umP-ZA-qv6" customClass="ViewController" customModule="Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Btb-ml-YUB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xf-A2-RjR">
+                                <rect key="frame" x="20" y="312" width="187.5" height="43"/>
+                                <color key="backgroundColor" red="0.74369273970000005" green="0.94239152680000005" blue="0.36190100850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Compass">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="compassButton:" destination="umP-ZA-qv6" eventType="touchUpInside" id="yKR-P0-giy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Vg-f9-Z7Y" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Xf-A2-RjR" secondAttribute="trailing" constant="20" id="4nQ-XI-zvT"/>
+                            <constraint firstItem="5Xf-A2-RjR" firstAttribute="centerY" secondItem="Btb-ml-YUB" secondAttribute="centerY" id="EZ4-vx-fql"/>
+                            <constraint firstItem="5Xf-A2-RjR" firstAttribute="leading" secondItem="6Vg-f9-Z7Y" secondAttribute="leading" constant="20" id="Not-oE-qte"/>
+                            <constraint firstItem="5Xf-A2-RjR" firstAttribute="width" secondItem="Btb-ml-YUB" secondAttribute="width" multiplier="0.5" id="WEn-In-emn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Vg-f9-Z7Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIN-6h-r6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="543"/>
         </scene>
     </scenes>
 </document>
