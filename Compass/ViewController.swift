@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     @IBAction func compassButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
+
+    @IBAction func unwindToHome(segue: UIStoryboardSegue){
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

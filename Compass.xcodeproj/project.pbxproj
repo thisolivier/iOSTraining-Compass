@@ -14,6 +14,7 @@
 		09439EAF1F6A30D4008A4DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09439EAD1F6A30D4008A4DA6 /* LaunchScreen.storyboard */; };
 		09439EBA1F6A30D4008A4DA6 /* CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09439EB91F6A30D4008A4DA6 /* CompassTests.swift */; };
 		09439EC51F6A30D4008A4DA6 /* CompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09439EC41F6A30D4008A4DA6 /* CompassUITests.swift */; };
+		09439ED61F6AD8A5008A4DA6 /* BlueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09439ED51F6AD8A5008A4DA6 /* BlueController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		09439EC01F6A30D4008A4DA6 /* CompassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09439EC41F6A30D4008A4DA6 /* CompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassUITests.swift; sourceTree = "<group>"; };
 		09439EC61F6A30D4008A4DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09439ED51F6AD8A5008A4DA6 /* BlueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				09439EA41F6A30D4008A4DA6 /* AppDelegate.swift */,
 				09439EA61F6A30D4008A4DA6 /* ViewController.swift */,
+				09439ED51F6AD8A5008A4DA6 /* BlueController.swift */,
 				09439EA81F6A30D4008A4DA6 /* Main.storyboard */,
 				09439EAB1F6A30D4008A4DA6 /* Assets.xcassets */,
 				09439EAD1F6A30D4008A4DA6 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					09439EA01F6A30D4008A4DA6 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					09439EB41F6A30D4008A4DA6 = {
@@ -261,6 +265,7 @@
 			files = (
 				09439EA71F6A30D4008A4DA6 /* ViewController.swift in Sources */,
 				09439EA51F6A30D4008A4DA6 /* AppDelegate.swift in Sources */,
+				09439ED61F6AD8A5008A4DA6 /* BlueController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNHB9B5GX6;
 				INFOPLIST_FILE = Compass/Info.plist;
@@ -433,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = oliviertests.Compass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNHB9B5GX6;
 				INFOPLIST_FILE = Compass/Info.plist;
